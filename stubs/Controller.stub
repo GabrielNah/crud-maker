@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests\{{modelName}}\Store{{modelName}}Request;
+use App\Http\Requests\{{modelName}}\Update{{modelName}}Request;
+use App\Services\{{modelName}}Service;
+
+class {{modelName}}Controller extends Controller
+{
+
+
+    public function __construct(
+        private {{modelName}}Service ${{serviceName}})
+    {}
+
+    {{method.index}}
+
+    {{method.create}}
+
+    {{method.store}}
+
+    {{method.show}}
+
+    {{method.edit}}
+
+    {{method.update}}
+
+    {{method.destroy}}
+}

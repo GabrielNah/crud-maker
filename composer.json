@@ -1,0 +1,20 @@
+{
+    "name": "kaysr/crud-maker",
+    "description": "This package created CRUD prototype to save time",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "beta",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Kaysr\\CrudMaker\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kaysr\\CrudMaker\\CrudMakerServiceProvider"
+            ]
+        }
+    }
+}

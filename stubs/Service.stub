@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Services;
+
+use App\Models\{{modelName}};
+
+class {{modelName}}Service
+{
+    public function getAllPaginated($perPage = 15)
+    {
+        return {{modelName}}::paginate($perPage);
+    }
+
+    public function create(array $data)
+    {
+        return {{modelName}}::create($data);
+    }
+
+    public function findById($id)
+    {
+        return {{modelName}}::findOrFail($id);
+    }
+
+    public function update($id, array $data)
+    {
+        ${{modelName}} = $this->findById($id);
+        ${{modelName}}->update($data);
+        return ${{modelName}};
+    }
+
+    public function delete($id)
+    {
+        ${{modelName}} = $this->findById($id);
+        return ${{modelName}}->delete();
+    }
+}
