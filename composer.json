@@ -1,6 +1,7 @@
 {
     "name": "kaysr/crud-maker",
     "description": "This package created CRUD prototype to save time",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "beta",
