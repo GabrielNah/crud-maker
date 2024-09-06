@@ -43,10 +43,6 @@ For each CRUD operation, this package generates the following files:
 
 The generated files provide a basic structure and need to be filled with your specific data and logic. This allows for maximum flexibility while still saving time on initial setup.
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
 ## License
 
 MIT
