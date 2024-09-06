@@ -85,39 +85,39 @@ class CrudGenerator extends Command
             "view" => [
                 "method" => [
                     "index"  => 'public function index()
-                     {
-                         ${{modelNamePluralCamelCase}} = $this->{{serviceName}}->getAllPaginated();
-                         return {{response.index}};
-                     }',
-                    "create" =>'public function create()
-                     {
-                         return {{response.create}};
-                     }',
-                    "store" =>'public function store({{StoreModelRequest}} $request)
-                     {
-                         $this->{{serviceName}}->create($request->validated());
-                         return {{response.store}};
-                     }',
-                    "show" =>'public function show($id)
-                    {
-                       ${{modelNameSingularCamelCase}} = $this->{{serviceName}}->findById($id);
-                       return {{response.show}};
-                    }',
-                    "edit" =>'public function edit($id)
-                    {
-                       ${{modelNameSingularCamelCase}} = $this->{{serviceName}}->findById($id);
-                       return {{response.edit}};
-                    }',
-                    "update" =>'public function update({{UpdateModelRequest}} $request, $id)
-                    {
-                        $this->{{serviceName}}->update($id, $request->validated());
-                        return {{response.update}};
-                    }',
-                    "destroy" =>'public function destroy($id)
-                    {
-                        $this->{{serviceName}}->delete($id);
-                        return  {{response.destroy}};
-                    }'
+{
+    ${{modelNamePluralCamelCase}} = $this->{{serviceName}}->getAllPaginated();
+    return {{response.index}};
+}',
+                    "create" => 'public function create()
+{
+    return {{response.create}};
+}',
+                    "store" => 'public function store({{StoreModelRequest}} $request)
+{
+    $this->{{serviceName}}->create($request->validated());
+    return {{response.store}};
+}',
+                    "show" => 'public function show($id)
+{
+    ${{modelNameSingularCamelCase}} = $this->{{serviceName}}->findById($id);
+    return {{response.show}};
+}',
+                    "edit" => 'public function edit($id)
+{
+    ${{modelNameSingularCamelCase}} = $this->{{serviceName}}->findById($id);
+    return {{response.edit}};
+}',
+                    "update" => 'public function update({{UpdateModelRequest}} $request, $id)
+{
+    $this->{{serviceName}}->update($id, $request->validated());
+    return {{response.update}};
+}',
+                    "destroy" => 'public function destroy($id)
+{
+    $this->{{serviceName}}->delete($id);
+    return {{response.destroy}};
+}'
                 ],
                 "response" => [
                     "index" => "view('{{modelNameSingularSnakeCase}}.index', compact('{{modelNamePluralCamelCase}}'))",
@@ -130,41 +130,41 @@ class CrudGenerator extends Command
                 ]
             ],
             "inertia" => [
-                "method"=>[
+                "method" => [
                     "index"  => 'public function index()
-                     {
-                         ${{modelNamePluralCamelCase}} = $this->{{serviceName}}->getAllPaginated();
-                         return {{response.index}};
-                     }',
-                    "create" =>'public function create()
-                     {
-                         return {{response.create}};
-                     }',
-                    "store" =>'public function store({{StoreModelRequest}} $request)
-                     {
-                         $this->{{serviceName}}->create($request->validated());
-                         return {{response.store}};
-                     }',
-                    "show" =>'public function show($id)
-                     {
-                        ${{modelNameSingularCamelCase}} = $this->{{serviceName}}->findById($id);
-                        return {{response.show}};
-                     }',
-                    "edit" =>'public function edit($id)
-                     {
-                        ${{modelNameSingularCamelCase}} = $this->{{serviceName}}->findById($id);
-                        return {{response.edit}};
-                     }',
-                    "update" =>'public function update({{UpdateModelRequest}} $request, $id)
-                     {
-                         $this->{{serviceName}}->update($id, $request->validated());
-                         return {{response.update}};
-                     }',
-                    "destroy" =>'public function destroy($id)
-                     {
-                         $this->{{serviceName}}->delete($id);
-                         return  {{response.destroy}};
-                     }'
+{
+    ${{modelNamePluralCamelCase}} = $this->{{serviceName}}->getAllPaginated();
+    return {{response.index}};
+}',
+                    "create" => 'public function create()
+{
+    return {{response.create}};
+}',
+                    "store" => 'public function store({{StoreModelRequest}} $request)
+{
+    $this->{{serviceName}}->create($request->validated());
+    return {{response.store}};
+}',
+                    "show" => 'public function show($id)
+{
+    ${{modelNameSingularCamelCase}} = $this->{{serviceName}}->findById($id);
+    return {{response.show}};
+}',
+                    "edit" => 'public function edit($id)
+{
+    ${{modelNameSingularCamelCase}} = $this->{{serviceName}}->findById($id);
+    return {{response.edit}};
+}',
+                    "update" => 'public function update({{UpdateModelRequest}} $request, $id)
+{
+    $this->{{serviceName}}->update($id, $request->validated());
+    return {{response.update}};
+}',
+                    "destroy" => 'public function destroy($id)
+{
+    $this->{{serviceName}}->delete($id);
+    return {{response.destroy}};
+}'
                 ],
                 "response" => [
                     "index" => "inertia('{{modelNameSingularSnakeCase}}.index', compact('{{modelNamePluralCamelCase}}'))",
@@ -177,34 +177,34 @@ class CrudGenerator extends Command
                 ]
             ],
             "json" => [
-                "method"=>[
+                "method" => [
                     "index"  => 'public function index()
-                                  {
-                                      ${{modelNamePluralCamelCase}} = $this->{{serviceName}}->getAllPaginated();
-                                      return {{response.index}};
-                                  }',
-                    "create"=>"",
-                    "store" =>'public function store({{StoreModelRequest}} $request)
-                    {
-                        $this->{{serviceName}}->create($request->validated());
-                        return {{response.store}};
-                    }',
-                    "show" =>'public function show($id)
-                    {
-                       ${{modelNameSingularCamelCase}} = $this->{{serviceName}}->findById($id);
-                       return {{response.show}};
-                    }',
-                    "edit"=>"",
-                    "update" =>'public function update({{UpdateModelRequest}} $request, $id)
-                     {
-                         $this->{{serviceName}}->update($id, $request->validated());
-                         return {{response.update}};
-                     }',
-                    "destroy" =>'public function destroy($id)
-                    {
-                        $this->{{serviceName}}->delete($id);
-                        return  {{response.destroy}};
-                    }'
+{
+    ${{modelNamePluralCamelCase}} = $this->{{serviceName}}->getAllPaginated();
+    return {{response.index}};
+}',
+                    "create" => "",
+                    "store" => 'public function store({{StoreModelRequest}} $request)
+{
+    $this->{{serviceName}}->create($request->validated());
+    return {{response.store}};
+}',
+                    "show" => 'public function show($id)
+{
+    ${{modelNameSingularCamelCase}} = $this->{{serviceName}}->findById($id);
+    return {{response.show}};
+}',
+                    "edit" => "",
+                    "update" => 'public function update({{UpdateModelRequest}} $request, $id)
+{
+    $this->{{serviceName}}->update($id, $request->validated());
+    return {{response.update}};
+}',
+                    "destroy" => 'public function destroy($id)
+{
+    $this->{{serviceName}}->delete($id);
+    return {{response.destroy}};
+}'
                 ],
                 "response" => [
                     "index" => "response()->json(compact('{{modelNamePluralCamelCase}}'))",
