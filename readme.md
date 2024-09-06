@@ -53,5 +53,5 @@ MIT
 
 ## About
 
-This package was created for personal use to streamline CRUD creation in Laravel projects. It's been open-sourced in the hope that others might find it useful or contribute to its improvement.
+This package was created for personal use to streamline CRUD creation in Laravel projects. So I hope that others might find it useful.
 
